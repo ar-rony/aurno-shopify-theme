@@ -1,0 +1,26 @@
+
+{% if section.settings.show_slogan  %}
+ <h1>{{ settings.site_tagline  }}</h1>
+{% endif %}
+<div>{{ section.settings.footer_text }} </div>
+
+{% schema %}
+  {
+    "name": "Footer",
+    "tag": "footer",
+    "class": "aurno_footer",
+    "settings": [
+      {
+        "type": "text",
+        "id": "footer_text",
+        "label": "Footer Copyright"
+      },
+      {
+        "type": "checkbox",
+        "id": "show_slogan",
+        "label": "Show Slogan?",
+        "default": true
+      }
+    ]
+  }
+{% endschema %}

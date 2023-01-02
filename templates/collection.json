@@ -1,0 +1,11 @@
+{
+    "name": "Main Collection Template",
+    "sections": {
+        "collection":{
+            "type": "main-collection"
+        }
+    },
+    "order": [
+        "collection"
+    ]
+}

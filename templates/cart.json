@@ -1,0 +1,15 @@
+{
+    "name": "Main Cart Template",
+    "sections":{
+        "cart-items": {
+            "type": "main-cart-items",
+            "settings": {
+              "padding_top": 36,
+              "padding_bottom": 36
+            }  
+      }
+    },
+     "order": [
+      "cart-items"
+    ]
+}

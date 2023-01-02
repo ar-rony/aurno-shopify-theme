@@ -1,0 +1,20 @@
+[
+    {
+        "name": "theme_info",
+        "theme_author": "AR Rony",
+        "theme_name": "Aurno Shopify Theme",
+        "theme_version": "1.0.0",
+        "theme_documentation_url": "https://github.com/ar-rony/aurno-shopify-theme",
+        "theme_support_email": "ardotrony@gmail.com"
+    },
+    {
+        "name": "General Settings",
+        "settings": [
+            {
+                "type": "text",
+                "id": "site_tagline",
+                "label": "Write a slogan"
+            }
+        ]
+    }
+]

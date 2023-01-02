@@ -1,0 +1,15 @@
+<h1> {{ section.settings.errormsg }} </h1>
+
+{% schema %}
+    {
+        "name": "404 Error Message",
+        "settings": [
+            {
+                "type": "text",
+                "id": "errormsg",
+                "label": "Custom error message",
+                "default": "Not Found ! 404 Error"
+            }
+        ]
+    }
+{% endschema %}

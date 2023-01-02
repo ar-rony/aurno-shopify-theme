@@ -1,0 +1,218 @@
+<div class="slideshow">
+    <div class="slides">
+        <div class="slide">
+            <div class="slide-img">
+                <img src="{{ 'slide-1-min.png' | img_url: 'master' }}" alt="">
+            </div>
+            <h2 class="slide-heading">This is slide heading</h2>
+            <div class="slide-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias, quibusdam.</div>
+            <button class="slide-btn">
+                View Product
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+    .slide-img{
+        background: url( {{ 'slide-1-min.png' | img_url: 'master' }} ) no-repeat scroll center center cover;
+    }
+</style>
+{% schema %}
+    {
+      "name": "Slideshow",
+      "tag": "section",
+      "class": "section",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Slideshow Image 1"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Slideshow Image 2"
+        },
+        {
+          "type": "range",
+          "id": "image_overlay_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 10,
+          "unit": "%",
+          "label": "Image Overlay Opacity",
+          "default": 0
+        },
+        {
+          "type": "select",
+          "id": "image_height",
+          "options": [
+            {
+              "value": "adapt",
+              "label": "Adapt"
+            },
+            {
+              "value": "small",
+              "label": "Small"
+            },
+            {
+              "value": "medium",
+              "label": "Medium"
+            },
+            {
+              "value": "large",
+              "label": "Large"
+            }
+          ],
+          "default": "medium",
+          "label": "Medium",
+          "info": "Select Image Height"
+        },
+        {
+          "type": "select",
+          "id": "desktop_content_position",
+          "options": [
+            {
+              "value": "top-left",
+              "label": "Left Top"
+            },
+            {
+              "value": "top-center",
+              "label": "Top Center"
+            },
+            {
+              "value": "top-right",
+              "label": "Top Right"
+            },
+            {
+              "value": "middle-left",
+              "label": "Middle Left"
+            },
+            {
+              "value": "middle-center",
+              "label": "Middle Center"
+            },
+            {
+              "value": "middle-right",
+              "label": "t:sections.image-banner.settings.desktop_content_position.options__6.label"
+            },
+            {
+              "value": "bottom-left",
+              "label": "Bottom Left"
+            },
+            {
+              "value": "bottom-center",
+              "label": "Bottom Center"
+            },
+            {
+              "value": "bottom-right",
+              "label": "Bottom Right"
+            }
+          ],
+          "default": "middle-center",
+          "label": "Middle Center"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_text_box",
+          "default": true,
+          "label": "Show Text Box"
+        },
+        {
+          "type": "select",
+          "id": "desktop_content_alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ],
+          "default": "center",
+          "label": "Center"
+        },
+        {
+          "type": "select",
+          "id": "color_scheme",
+          "options": [
+            {
+              "value": "accent-1",
+              "label": "Color 1"
+            },
+            {
+              "value": "accent-2",
+              "label": "Color 2"
+            },
+            {
+              "value": "background-1",
+              "label": "Background color 1"
+            },
+            {
+              "value": "background-2",
+              "label": "Background Color 2"
+            },
+            {
+              "value": "inverse",
+              "label": "Inverse"
+            }
+          ],
+          "default": "background-1",
+          "label": "Default Color",
+          "info": "Choose Background Color"
+        }
+      ],
+      "blocks": [
+        {
+          "type": "heading",
+          "name": "Heading",
+          "limit": 1,
+          "settings": [
+            {
+              "type": "text",
+              "id": "heading",
+              "default": "Image banner",
+              "label": "Image Banner"
+            },
+            {
+              "type": "select",
+              "id": "heading_size",
+              "options": [
+                {
+                  "value": "h2",
+                  "label": "H2"
+                },
+                {
+                  "value": "h1",
+                  "label": "H1"
+                },
+                {
+                  "value": "h0",
+                  "label": "H0"
+                }
+              ],
+              "default": "h1",
+              "label": "H1"
+            }
+          ]
+        }
+      ],
+      "presets": [
+        {
+          "name": "Slideshow",
+          "blocks": [
+            {
+              "type": "heading"
+            }
+          ]
+        }
+      ]
+    }
+    {% endschema %}
